@@ -1,7 +1,0 @@
-2023-09-15 23:37:45.903785 - Failed at https://www.english-bangla.com/bntobn/index/%e0%a6%85%e0%a6%b8
-2023-09-15 23:47:27.654450 - Failed at https://www.english-bangla.com/bntobn/index/%e0%a6%87%e0%a6%a4%e0%a6%b8%e0%a7%8d%e0%a6%a4%e0%a6%a4%3d%20%e0%a6%95%e0%a6%b0%e0%a6%be
-2023-09-15 23:53:51.957490 - Failed at https://www.english-bangla.com/bntobn/index/%e0%a6%8f%e0%a6%ae.%20%e0%a6%8f
-2023-09-16 00:04:39.798772 - Failed at https://www.english-bangla.com/bntobn/index/%e0%a6%85%e0%a6%b8
-2023-09-16 00:05:43.073518 - Failed at https://www.english-bangla.com/bntobn/index/%e0%a6%87%e0%a6%a4%e0%a6%b8%e0%a7%8d%e0%a6%a4%e0%a6%a4%3d%20%e0%a6%95%e0%a6%b0%e0%a6%be
-2023-09-16 00:14:04.138847 - Failed at https://www.english-bangla.com/bntobn/index/%e0%a6%85%e0%a6%b8
-2023-09-16 00:15:11.718260 - Failed at https://www.english-bangla.com/bntobn/index/%e0%a6%87%e0%a6%a4%e0%a6%b8%e0%a7%8d%e0%a6%a4%e0%a6%a4%3d%20%e0%a6%95%e0%a6%b0%e0%a6%be

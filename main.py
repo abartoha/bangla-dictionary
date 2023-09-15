@@ -23,7 +23,7 @@ Bangla Dictionary scraper
 if __name__ == "__main__":
     print("Running main::BanglaDictionary module")
     from alphabet_collector import collect_alphabet
-    from paginatior import collect_pages
+    from paginator import collect_pages
     from indicer import collect_word_index
     from dictionary_parallel import collect_words
 

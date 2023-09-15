@@ -6,7 +6,6 @@ from tqdm import tqdm
 from broth import Page
 from writer import read_wordlist_links, dictionary_to_json, write_to_log
 
-WORD_COUNT = 1000
 MAX_WORKERS = 25
 
 # LINK https://stackoverflow.com/questions/51601756/use-tqdm-with-concurrent-futures
@@ -27,20 +26,24 @@ def get_word(link: str) -> dict:
         return {word: meaning}
 
     except Exception as _err:  # pylint: disable=broad-except
+        # LINK https://stackoverflow.com/questions/756180/pylint-warning-on-except-exception
         write_to_log(f'Failed at {link} {_err}')
         return {}
+
 
 def collect_words():
     """
     Collects all the words
     """
-    page_list = read_wordlist_links()[:WORD_COUNT]
+    page_list = read_wordlist_links()
+    print(len(page_list))
     word_meanings = {}
     with ThreadPoolExecutor(MAX_WORKERS) as executor:
         # the argument 'total' is absolutely essential for aesthetic reasons
         for link_word in tqdm(executor.map(get_word, page_list), leave=False, unit="Words", desc="Fetching words", total=len(page_list)):
             word_meanings.update(link_word)
 
-
     dictionary_to_json(
         word_meanings, "dictionary.json")
+
+# collect_words()
