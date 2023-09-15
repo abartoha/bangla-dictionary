@@ -1,13 +1,11 @@
 """
 Bangla Dictionary scraper
 """
-from bs4 import BeautifulSoup
-import re
-from broth import Page
-from writer import write_file
 
 # NOTE U+0980 – U+09FF bangla unicode range
 # LINK https://stackoverflow.com/questions/150033/regular-expression-to-match-non-ascii-characters
+
+# 1 - Run the alphabet module
 
 # This should do it:
 
@@ -21,7 +19,15 @@ from writer import write_file
 
 # Code charts list of Unicode ranges
 # This tool to create a regex filtered by Unicode block.
-# TODO find the list of bangla alphabets
-# TODO find all the words for each letter in one page
-# TODO find the final page number of every 
 
+if __name__ == "__main__":
+    print("Running main::BanglaDictionary module")
+    from alphabet_collector import collect_alphabet
+    from paginatior import collect_pages
+    from indicer import collect_word_index
+    from dictionary_parallel import collect_words
+
+    collect_alphabet()
+    collect_pages()
+    collect_word_index()
+    collect_words()
