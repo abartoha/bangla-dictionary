@@ -12,7 +12,7 @@ def letter_template(letter):
     '''
     Template for link making
     '''
-    return f"https://www.english-bangla.com/browse/bntobn/{letter}"
+    return f"https://www.english-bangla.com/browse/index/{letter}"
 
 
 def get_page_num(letter: str):
@@ -20,7 +20,11 @@ def get_page_num(letter: str):
     Returns the page number of a letter
     '''
     letter_page = Page(letter_template(letter))
-    main_unordered_list = letter_page.find_id('cat_page')[0].find('ul')
+    main_unordered_list = letter_page.find_id('cat_page')
+    if main_unordered_list:
+        main_unordered_list = main_unordered_list[0].find('ul')
+    else:
+        return {}
     # match the ul for No match found
     if "No word" in main_unordered_list.text:
         # lINK https://stackoverflow.com/questions/38542543/functionality-of-python-in-vs-contains/38542777?noredirect=1#comment64477339_38542543

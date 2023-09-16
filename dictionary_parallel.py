@@ -36,7 +36,7 @@ def collect_words():
     Collects all the words
     """
     page_list = read_wordlist_links()
-    print(len(page_list))
+    # print(len(page_list))
     word_meanings = {}
     with ThreadPoolExecutor(MAX_WORKERS) as executor:
         # the argument 'total' is absolutely essential for aesthetic reasons

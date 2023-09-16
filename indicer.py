@@ -12,7 +12,7 @@ def letter_template(_letter, page_num):
     """
     Template for the letteing linkss
     """
-    return f"https://www.english-bangla.com/browse/bntobn/{_letter}/{page_num}"
+    return f"https://www.english-bangla.com/browse/index/{_letter}/{page_num}"
 
 
 def get_list(commonargs):
@@ -36,7 +36,7 @@ def collect_word_index():
     """
     link_list = []
     dictionary = read_page_dict()
-    with ThreadPoolExecutor(5) as executor:
+    with ThreadPoolExecutor(15) as executor:
         for list_part in tqdm(executor.map(get_list, dictionary.items()), leave=False, unit="Letters", total=len(dictionary), desc="Indexing"):
             link_list.extend(list_part)
 
